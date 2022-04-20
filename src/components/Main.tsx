@@ -1,13 +1,21 @@
-import { Stack, StackProps } from '@chakra-ui/react'
+import { Box, Text, VStack } from '@chakra-ui/react';
+import React from 'react'
 
-export const Main = (props: StackProps) => (
-  <Stack
-    spacing="1.5rem"
-    width="100%"
-    maxWidth="48rem"
-    mt="-45vh"
-    pt="8rem"
-    px="1rem"
-    {...props}
-  />
-)
+interface MainProps {
+
+}
+
+export const Main: React.FC<MainProps> = ({}) => {
+    return (
+        <Box backgroundColor='red' w="100%" >
+            <VStack>
+                <Text textColor='white'> This the 1 content </Text>
+                <Text textColor='white'> This the 2 content </Text>
+                <Text textColor='white'> This the 3 content </Text>
+                <Text textColor='white'> This the 4 content </Text>
+                <Text textColor='white'> This the 5 content </Text>
+            </VStack>
+            
+        </Box> 
+    );
+}
