@@ -1,4 +1,4 @@
-import { Container } from "../components/Container";
+import { Container } from "@chakra-ui/react";
 import { Navbar } from "../components/Navbar";
 import { Header } from "../components/Header";
 import { Main } from "../components/Main";
@@ -6,14 +6,8 @@ import { Footer } from "../components/Footer";
 import { Box } from "@chakra-ui/react";
 
 const Index = () => (
-  <Container>
-    <Box backgroundColor='green'>
-      <Navbar />
-      <Header /> 
-    </Box>
-
-    <Main /> 
-    <Footer /> 
+  <Container maxW="container.xxl" >
+    <Header /> 
   </Container>
 )
 

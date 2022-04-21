@@ -7,7 +7,7 @@ interface MainProps {
 
 export const Main: React.FC<MainProps> = ({}) => {
     return (
-        <Box backgroundColor='red' w="100%" >
+        <Box backgroundColor='red' >
             <VStack>
                 <Text textColor='white'> This the 1 content </Text>
                 <Text textColor='white'> This the 2 content </Text>
