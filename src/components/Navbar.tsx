@@ -80,9 +80,9 @@ const MenuLinks = ({isOpen}) => {
                 pt={[4, 4, 0, 0]}
             >
                 <MenuItem to="/" isLast={0}> Home </MenuItem>
-                <MenuItem to="/" isLast={0}> About </MenuItem>
-                <MenuItem to="/" isLast={0}> Contact </MenuItem>
-                <MenuItem to="/" isLast={0}> Other </MenuItem>
+                <MenuItem to="/about" isLast={0}> About </MenuItem>
+                <MenuItem to="/contact" isLast={0}> Contact </MenuItem>
+                <MenuItem to="/other" isLast={0}> Other </MenuItem>
                 <Button colorScheme="green"> Register </Button>
             </Stack>
         </Box>
