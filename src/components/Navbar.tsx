@@ -1,5 +1,6 @@
-import { Box, Text, Button, Spacer, Stack, Link, Flex} from '@chakra-ui/react';
+import { Box, Text, Button, Image, Stack, Link, Flex} from '@chakra-ui/react';
 import React, {useState} from 'react';
+import Img from '../Util/logo.jpg'; 
 
 interface NavbarProps {
 
@@ -7,9 +8,17 @@ interface NavbarProps {
 
 const Logo = (props) => {
     return(
-        <Box {...props} >
-            <Text fontSize='lg' fontWeight='bold'>
-                LOGO
+        <Box {...props} flexDirection='row' display='flex' justifyContent='center' >
+            <Box>
+                
+                <Image   
+                    borderRadius='full'
+                    src={Img.src} 
+                    pr='1'
+                    alt='Company Logo'/>
+            </Box>
+            <Text fontSize='2xl' fontWeight='bold'>
+                NZQR
             </Text>
         </Box>
     )
@@ -18,7 +27,7 @@ const Logo = (props) => {
 const MenuToggle = ({toggle, isOpen}) => {
     return (
         <Box display={{base: 'block', md: 'none'}} onClick={toggle}>
-            {isOpen ? <Text> Close Menu </Text> : <Text> Open Menu </Text>}
+            {isOpen ? <Text> Close Menu </Text> : <Text> Open Menu </Text> }
         </Box>
     )
 }
@@ -41,13 +50,15 @@ const NavbarContainer = ({children, ...props}) => {
             justify="space-around" 
             position="sticky" 
             top={0}
+            zIndex={1}
             wrap='wrap'
             w="100%"
             mb={10}
             p={5}
             px={1}
-            bg={["primary.500", "primary.500", "primary.100", "primary.100"]}
-            color={["white", "white", "primary.700", "primary.700"]}
+            bg="linear-gradient(to right, #7110b3, #3d0f55)"
+            opacity={.9}
+            color={["white"]}
             {...props}
         >
             {children}
