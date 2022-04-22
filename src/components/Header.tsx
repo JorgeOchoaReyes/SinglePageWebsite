@@ -15,7 +15,8 @@ const LeftContent = () => {
                 w="full" 
                 h="full" 
                 p="10"  
-                justifyContent='space-around'>
+                justifyContent='space-around'
+                >
                 <Box>
                         <VStack spacing={8}>
                             <VStack spacing={2} alignContent='flex-start'>
@@ -55,7 +56,7 @@ const RightContent = () => {
 
 export const Header: React.FC<HeaderProps> = ({}) => {
     return (
-        <Flex h={{base: "auto", md: "90vh"}}  py={[0, 10, 15]} direction={{base: "column", md: "row"}}>
+        <Flex h={{base: "auto", md: "90vh"}} textColor='white'  py={[0, 10, 15]} direction={{base: "column", md: "row"}}>
             <LeftContent /> 
             <RightContent />     
         </Flex> 

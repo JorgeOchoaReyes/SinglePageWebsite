@@ -83,7 +83,7 @@ const MenuLinks = ({isOpen}) => {
                 <MenuItem to="/" isLast={0}> About </MenuItem>
                 <MenuItem to="/" isLast={0}> Contact </MenuItem>
                 <MenuItem to="/" isLast={0}> Other </MenuItem>
-                <Button> Register </Button>
+                <Button colorScheme="green"> Register </Button>
             </Stack>
         </Box>
     )
