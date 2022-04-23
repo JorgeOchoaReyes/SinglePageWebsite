@@ -6,9 +6,10 @@ import { Footer } from "../components/Footer";
 import { Box } from "@chakra-ui/react";
 
 const Index = () => (
-  <Container maxW="container.xxl" >
+  <Box maxW="full" >
     <Header /> 
-  </Container>
+    <Main /> 
+  </Box>
 )
 
 export default Index

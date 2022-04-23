@@ -1,5 +1,6 @@
 import { Box, Text, Button, Image, Stack, Link, Flex} from '@chakra-ui/react';
 import React, {useState} from 'react';
+import { lightThemeGrad } from '../Util/constants';
 import Img from '../Util/logo.jpg'; 
 
 interface NavbarProps {
@@ -17,7 +18,7 @@ const Logo = (props) => {
                     pr='1'
                     alt='Company Logo'/>
             </Box>
-            <Text fontSize='2xl' fontWeight='bold'>
+            <Text fontSize='2xl' textColor="white" fontWeight='bold'>
                 NZQR
             </Text>
         </Box>
@@ -42,35 +43,12 @@ const MenuItem = ({children, isLast, to='/', ...rest}) => {
     )
 }
 
-const NavbarContainer = ({children, ...props}) => {
-    return (
-        <Flex 
-            as="nav"
-            align="center"
-            justify="space-around" 
-            position="sticky" 
-            top={0}
-            zIndex={1}
-            wrap='wrap'
-            w="100%"
-            mb={10}
-            p={5}
-            px={1}
-            bg="linear-gradient(to right, #7110b3, #3d0f55)"
-            opacity={.9}
-            color={["white"]}
-            {...props}
-        >
-            {children}
-        </Flex>
-    )
-}
-
 const MenuLinks = ({isOpen}) => {
     return (
         <Box 
             display={{base: isOpen ? 'block' : 'none', md: "block"}}
             flexBasis={{base: "100%", md: "auto"}}
+
     >   
             <Stack 
                 spacing={8} 
@@ -88,6 +66,32 @@ const MenuLinks = ({isOpen}) => {
         </Box>
     )
 }
+
+
+const NavbarContainer = ({children, ...props}) => {
+    return (
+        <Flex 
+            as="nav"
+            align="center"
+            justify="space-around" 
+            position="sticky" 
+            top={0}
+            zIndex={1}
+            wrap='wrap'
+            w="100%"
+            mb={5}
+            p={5}
+            px={1}
+            bg={lightThemeGrad}
+            opacity={.9}
+            color={["white"]}
+            {...props}
+        >
+            {children}
+        </Flex>
+    )
+}
+
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
     const [isOpen, setIsOpen] = useState(false); 
