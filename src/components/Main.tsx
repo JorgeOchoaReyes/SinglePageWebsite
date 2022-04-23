@@ -60,7 +60,7 @@ const CardContent = (data) => {
 
 export const Main: React.FC<MainProps> = ({}) => {
     return (
-        <Flex h={{base: "auto"}} py={20} bg={darkThemeGrad} w="full" justifyContent='center'  direction={{base: "column", md: "row"}} >
+        <Flex h={{base: "auto"}} py={20} bg={darkThemeGrad} w="full" justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
             <VStack >
                 <Heading paddingTop={10}> Teams </Heading>
                 <CardContent /> 
