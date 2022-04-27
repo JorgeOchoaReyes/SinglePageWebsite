@@ -68,7 +68,7 @@ const CardContent = (data) => {
 
 export const Teams: React.FC<MainProps> = ({}) => {
     return (
-        <Flex h={{base: "auto",  md: "75vh"}} bg={darkThemeGrad_TB} w="full"  justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
+        <Flex h={{base: "auto",  sm: "90vh", xl: '85vh'}} bg={darkThemeGrad_TB} w="full"  justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
             <Flex justifyContent='space-around' direction={{base: "column"}}>
                 <Box fontSize={{ base: '24px', lg: '30px',  xl: '50'}}>
                     <Text align="center" > Show off the teams that your organizaiton competes in. </Text>
