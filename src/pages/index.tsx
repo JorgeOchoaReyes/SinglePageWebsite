@@ -1,14 +1,16 @@
-import { Container } from "@chakra-ui/react";
+import { Container, theme } from "@chakra-ui/react";
 import { Navbar } from "../components/Navbar";
 import { Header } from "../components/Header";
-import { Main } from "../components/Main";
+import { Teams } from "../components/Teams";
 import { Footer } from "../components/Footer";
 import { Box } from "@chakra-ui/react";
+import { Achievements } from "../components/Achievements";
 
 const Index = () => (
-  <Box maxW="full" >
+  <Box maxW="full"  >
     <Header /> 
-    <Main /> 
+    <Teams /> 
+    <Achievements /> 
   </Box>
 )
 

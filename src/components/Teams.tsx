@@ -1,6 +1,6 @@
 import { Box, Heading, Image, SlideFade, Text, VStack, Stack, Flex} from '@chakra-ui/react';
 import React from 'react'
-import { animationDelay, darkThemeGrad } from '../Util/constants';
+import { animationDelay, darkThemeGrad, darkThemeGrad_TB } from '../Util/constants';
 import Valorant from '../Util/VALORANT.png';
 import Halo from '../Util/halo.jpg';
 import Fortnite from '../Util/fortnite.jpg';
@@ -11,18 +11,27 @@ interface MainProps {
 
 const Card = ({title, placements, img}) => {
     return (
-        <Box bg="" as='article'  h="sm" maxW='sm' p='5' borderWidth='1px' rounded='md'>
+        <Box bg="" as='article'  h={{base:'auto'}} maxW='sm' p='5' borderWidth='1px' rounded='md'>
             <Box>
                 <Image   
                     src={img} 
+                    w='auto'
+                    h={{base: 'auto', md: '48'}}
                     alt='Valorant Logo'/>
             </Box>
           <Heading size='md' my='2'>
               {title}
           </Heading>
-          <Text flexWrap='wrap'>
+          <Text fontSize={{base: 'auto'}} flexWrap='wrap'>
             {placements}
           </Text>
+          <Text fontSize={{base: 'auto'}} flexWrap='wrap'>
+            {placements}
+          </Text>
+          <Text fontSize={{base: 'auto'}} flexWrap='wrap'>
+            {placements}
+          </Text>
+
         </Box>
     )
 }
@@ -32,7 +41,6 @@ const CardContent = (data) => {
     <Stack 
         w="full" 
         h="full" 
-        p="10"  
         direction={{base: "column", md: "row"}}
         spacing={10}
         justifyContent='center'
@@ -58,13 +66,18 @@ const CardContent = (data) => {
 }
 
 
-export const Main: React.FC<MainProps> = ({}) => {
+export const Teams: React.FC<MainProps> = ({}) => {
     return (
-        <Flex h={{base: "auto"}} py={20} bg={darkThemeGrad} w="full" justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
-            <VStack >
-                <Heading paddingTop={10}> Teams </Heading>
-                <CardContent /> 
-            </VStack>
+        <Flex h={{base: "auto",  md: "75vh"}} bg={darkThemeGrad_TB} w="full"  justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
+            <Flex justifyContent='space-around' direction={{base: "column"}}>
+                <Box fontSize={{ base: '24px', lg: '30px',  xl: '50'}}>
+                    <Text align="center" > Show off the teams that your organizaiton competes in. </Text>
+                </Box>
+               
+                <Box>
+                    <CardContent /> 
+                </Box>
+            </Flex>
         </Flex> 
     );
 }
