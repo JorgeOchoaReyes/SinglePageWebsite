@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Footer />
       </Box>
 
+
     </ChakraProvider>
   )
 }

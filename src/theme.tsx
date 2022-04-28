@@ -29,7 +29,7 @@ const colors = {
   }
 };
 
-export const gradColor = "linear-gradient(to right, #7110b3, #3d0f55)"; 
+
 
 const theme = extendTheme({
   colors,

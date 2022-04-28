@@ -1,6 +1,8 @@
 import {
     Button,
     ButtonGroup,
+    Box, 
+    Heading,
     Container,
     Divider,
     IconButton,
@@ -8,21 +10,22 @@ import {
     Stack,
     Text,
   } from '@chakra-ui/react'
-  import * as React from 'react'
-  import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-  import { Logo } from '../Util/s-logo'
+import * as React from 'react'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { textColor } from '../Util/constants'
   
   export const Footer = () => (
-    <Container maxW="full" as="footer" role="contentinfo">
+    <Box maxWidth="full" as="footer" backgroundImage="radial-gradient(circle farthest-corner at 50% 100%, rgba(101, 17, 211, 0.88), #22015e)"  bottom={0} textColor={textColor} >
       <Stack
+        paddingLeft={1}
         spacing="8"
         direction={{ base: 'column', md: 'row' }}
         justify="space-between"
         py={{ base: '12', md: '16' }}
       >
         <Stack spacing={{ base: '6', md: '8' }} align="start">
-          <Logo />
-          <Text color="muted">Create beautiful websites remarkably fast.</Text>
+          <Heading fontWeight='bolder'> {"NZQR"} </Heading>
+          <Text color="muted"></Text>
         </Stack>
         <Stack
           direction={{ base: 'column-reverse', md: 'column', lg: 'row' }}
@@ -51,20 +54,21 @@ import {
             </Stack>
           </Stack>
           <Stack spacing="4">
-            <Text fontSize="sm" fontWeight="semibold" color="subtle">
+            {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
               Stay up to date
             </Text>
-            <Stack spacing="4" direction={{ base: 'column', sm: 'row' }} maxW={{ lg: '360px' }}>
+              <Stack spacing="4" direction={{ base: 'column', sm: 'row' }} maxW={{ lg: '360px' }}>
               <Input placeholder="Enter your email" type="email" required />
               <Button variant="primary" type="submit" flexShrink={0}>
                 Subscribe
               </Button>
-            </Stack>
+            </Stack> */} 
           </Stack>
         </Stack>
       </Stack>
       <Divider />
       <Stack
+        paddingRight={1}
         pt="8"
         pb="12"
         justify="space-between"
@@ -85,5 +89,5 @@ import {
           <IconButton as="a" href="#" aria-label="Twitter" icon={<FaTwitter fontSize="1.25rem" />} />
         </ButtonGroup>
       </Stack>
-    </Container>
+    </Box>
   )
