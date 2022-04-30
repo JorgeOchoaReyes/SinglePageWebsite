@@ -65,7 +65,7 @@ const RightContent = () => {
     )
 }
 
-export const Header: React.FC<HeaderProps> = ({}) => {
+export const Main: React.FC<HeaderProps> = ({}) => {
     return (
         <Flex h={{base: "auto", md: "80vh"}} textColor='white' bg="linear-gradient(to right, #7110b3, #3d0f55)"  py={[0, 10, 15]} direction={{base: "column", md: "row"}}>
             <LeftContent /> 

@@ -18,7 +18,7 @@ export const Achievements: React.FC<AchievementsProps> = ({}) => {
     return (
         <Flex h={{base: "auto"}} py={20} bg={darkTheme} w="full" justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
             <VStack >
-                <Heading paddingTop={10}> Teams </Heading>
+                <Heading paddingTop={10}> Achivements </Heading>
             </VStack>
         </Flex> 
     );

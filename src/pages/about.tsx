@@ -1,6 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import React from 'react'
-import { Header } from '../components/Header';
+import { Main } from '../components/Main';
 
 interface AboutProps {
 
