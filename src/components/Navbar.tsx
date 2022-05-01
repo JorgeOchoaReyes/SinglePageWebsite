@@ -2,6 +2,8 @@ import { Box, Text, Button, Image, Stack, Link, Flex} from '@chakra-ui/react';
 import React, {useState} from 'react';
 import { lightThemeGrad } from '../Util/constants';
 import Img from '../Util/logo.jpg'; 
+import {GiHamburgerMenu} from 'react-icons/gi';
+import {GrClose} from 'react-icons/gr';
 
 interface NavbarProps {
 
@@ -28,7 +30,7 @@ const Logo = (props) => {
 const MenuToggle = ({toggle, isOpen}) => {
     return (
         <Box display={{base: 'block', md: 'none'}} onClick={toggle}>
-            {isOpen ? <Text> Close Menu </Text> : <Text> Open Menu </Text> }
+            {isOpen ? <GrClose color='white' /> : <GiHamburgerMenu /> }
         </Box>
     )
 }
@@ -54,7 +56,7 @@ const MenuLinks = ({isOpen}) => {
                 spacing={8} 
                 align='center' 
                 justify={["center", "space-between", "flex-end", 'flex-end']}
-                direction={["column", "column", "row", "row"]}
+                direction={isOpen ?  "column" : "row"}
                 pt={[4, 4, 0, 0]}
             >
                 <MenuItem to="/" isLast={0}> Home </MenuItem>
