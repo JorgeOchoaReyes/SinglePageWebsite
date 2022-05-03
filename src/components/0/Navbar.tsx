@@ -1,7 +1,7 @@
-import { Box, Text, Button, Image, Stack, Link, Flex} from '@chakra-ui/react';
+import { Box, Text, Button, Image, Stack, Link, Flex, Fade} from '@chakra-ui/react';
 import React, {useState} from 'react';
-import { lightThemeGrad } from '../Util/constants';
-import Img from '../Util/logo.jpg'; 
+import { animationDelay, lightThemeGrad } from '../../Util/constants';
+import Img from '../../Util/logo.jpg'; 
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {GrClose} from 'react-icons/gr';
 
@@ -37,7 +37,7 @@ const MenuToggle = ({toggle, isOpen}) => {
 
 const MenuItem = ({children, isLast, to='/', ...rest}) => {
     return (
-        <Link href={to}>
+        <Link href={to} >
             <Text display='block' {...rest}> 
                 {children}
             </Text>
@@ -45,18 +45,20 @@ const MenuItem = ({children, isLast, to='/', ...rest}) => {
     )
 }
 
+//REPLACE THIS WITH A CHAKRA UI MENU 
 const MenuLinks = ({isOpen}) => {
+    
     return (
         <Box 
             display={{base: isOpen ? 'block' : 'none', md: "block"}}
             flexBasis={{base: "100%", md: "auto"}}
-
-    >   
+    >               
+    
             <Stack 
                 spacing={8} 
                 align='center' 
                 justify={["center", "space-between", "flex-end", 'flex-end']}
-                direction={isOpen ?  "column" : "row"}
+                direction={ {base: "column", md: "row"}}
                 pt={[4, 4, 0, 0]}
             >
                 <MenuItem to="/" isLast={0}> Home </MenuItem>
@@ -73,6 +75,7 @@ const MenuLinks = ({isOpen}) => {
 const NavbarContainer = ({children, ...props}) => {
     return (
         <Flex 
+        transition="1s"
             as="nav"
             align="center"
             justify="space-around" 

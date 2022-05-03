@@ -1,9 +1,9 @@
 import { Box, Heading, Image, SlideFade, Text, VStack, Stack, Flex} from '@chakra-ui/react';
 import React from 'react'
-import { animationDelay, darkThemeGrad_TB } from '../Util/constants';
-import Valorant from '../Util/VALORANT.png';
-import Halo from '../Util/halo.jpg';
-import Fortnite from '../Util/fortnite.jpg';
+import { animationDelay, darkThemeGrad_TB } from '../../Util/constants';
+import Valorant from '../../Util/VALORANT.png';
+import Halo from '../../Util/halo.jpg';
+import Fortnite from '../../Util/fortnite.jpg';
 // import Card from '../components/Card'; 
 
 interface MainProps {
@@ -12,7 +12,7 @@ interface MainProps {
 
 const Card = ({title, placements, img}) => {
     return (
-        <Box bg="" as='article'  h={{base:'auto'}} maxW='sm' p='5' borderWidth='1.5px' borderColor="#D3D3D3"  rounded='md'>
+        <Box bg="" as='article'  h={{base:'sm', sm: 'sm', md: 'auto'}} maxW='sm' p='5'  borderColor="#D3D3D3"  rounded='md'>
             <Box>
                 <Image   
                     src={img} 
@@ -73,7 +73,7 @@ const CardContent = (data) => {
 export const Teams: React.FC<MainProps> = ({}) => {
     return (
         <Flex h={{base: "auto",  sm: "90vh", xl: '80vh'}} bg={darkThemeGrad_TB} w="full"  justifyContent='center' textColor="white" direction={{base: "column", md: "row"}} >
-            <Flex justifyContent='space-around' direction={{base: "column"}}>
+            <Flex justifyContent='space-evenly' direction={{base: "column"}}>
                 <Box fontSize={{ base: '24px', lg: '30px',  xl: '45px'}} fontWeight='bolder'>
                     <Text align="center" > Show off the teams that your organizaiton competes in. </Text>
                 </Box>

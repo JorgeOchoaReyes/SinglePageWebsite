@@ -1,7 +1,7 @@
 import { Box, Heading, Image, VStack, Flex} from '@chakra-ui/react';
 import React from 'react'
-import { darkTheme } from '../Util/constants';
-import  Champs from '../Util/champs.jpg'; 
+import { darkTheme } from '../../Util/constants';
+import  Champs from '../../Util/champs.jpg'; 
 
 interface AchievementsProps {
 
@@ -23,7 +23,7 @@ export const Achievements: React.FC<AchievementsProps> = ({}) => {
                 <Box>
                     <Image 
                     sizes='auto'
-                    boxShadow=" 0 6px 6px hsl(0deg 0% 0% / 0.3)"
+                    boxShadow="0 6px 6px hsl(0deg 0% 0% / 0.3)"
                         src={Champs.src}
                         alt="Achivements"
                         />

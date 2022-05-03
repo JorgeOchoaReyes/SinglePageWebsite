@@ -1,11 +1,7 @@
-import { Container, theme } from "@chakra-ui/react";
-import { Navbar } from "../components/Navbar";
-import { Main } from "../components/Main";
-import { Teams } from "../components/Teams";
-import { Footer } from "../components/Footer";
-import { Box } from "@chakra-ui/react";
-import { Achievements } from "../components/Achievements";
-import { Layout } from "../components/Layout";
+import { Main } from "../components/1/Main";
+import { Teams } from "../components/2/Teams";
+import { Achievements } from "../components/3/Achievements";
+import { Layout } from "../components/0/Layout";
 
 const Index = () => (
   <Layout>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Text, Flex, Heading, VStack, Image, Button, SlideFade, Tooltip } from '@chakra-ui/react';
-import Product from '../Util/growthbook.png'; 
+import Product from '../../Util/growthbook.png'; 
 import {CheckIcon} from '@chakra-ui/icons'; 
-import { animationDelay } from '../Util/constants';
+import { animationDelay } from '../../Util/constants';
 
 interface HeaderProps {
 
@@ -50,15 +50,11 @@ const RightContent = () => {
             alignItems='center'>
             <SlideFade delay={animationDelay} in={true} offsetX='100px'>
                 <Box>
-
-
                     <Image   
                     useMap='#workmap'
                             src={Product.src} 
                             alt='Company Logo'/>
- 
                 </Box>
-
             </SlideFade>
                            
         </VStack>
